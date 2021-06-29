@@ -1,1 +1,1 @@
-web: java -jar target/upe_20202_verdinhas.jar
+web: java -jar target/upe_20202_verdinhas-1.0.jar
