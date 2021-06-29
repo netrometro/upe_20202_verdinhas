@@ -6,6 +6,7 @@
   <groupId>br.upe</groupId>
   <artifactId>upe_20202_verdinhas</artifactId>
   <version>1.0</version>
+  <name>upe_20202_verdinhas</name>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -13,7 +14,6 @@
     <version>2.3.0.RELEASE</version>
     <relativePath/>
   </parent>
-  <name>upe_20202_verdinhas</name>
 
   <properties>
     <java.version>1.8</java.version>
