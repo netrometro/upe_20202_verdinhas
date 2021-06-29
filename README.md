@@ -1,4 +1,4 @@
-# java-getting-started
+# UPE 2020.2 VERDINHAS 
 
 A barebones Java app, which can easily be deployed to Heroku.
 
