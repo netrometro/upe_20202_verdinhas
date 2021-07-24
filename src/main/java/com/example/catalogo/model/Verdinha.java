@@ -2,7 +2,9 @@ package com.example.catalogo.model;
 
 import java.time.LocalDate;
 
-public class Verdinha {
+import com.example.base.EntidadeBase;
+
+public class Verdinha extends EntidadeBase {
 
 	private String nome;
 	private String especie;
