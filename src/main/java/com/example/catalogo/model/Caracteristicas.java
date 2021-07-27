@@ -9,13 +9,19 @@ import javax.validation.constraints.Size;
 
 import com.example.base.EntidadeBase;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "caracteristicas")
 @Setter
 @Getter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Caracteristicas extends EntidadeBase {
 
 	@Column(length = 60, nullable = false)
