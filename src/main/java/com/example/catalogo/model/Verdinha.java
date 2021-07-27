@@ -2,8 +2,12 @@ package com.example.catalogo.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -45,5 +49,17 @@ public class Verdinha extends EntidadeBase {
 	private boolean visivel;
 	
 	private byte[] fotos;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_necessidades")
+	private Necessidades necessidades;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_local")
+	private Local local;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_caracteristicas")
+	private Caracteristicas caracteristicas;
 	
 }
