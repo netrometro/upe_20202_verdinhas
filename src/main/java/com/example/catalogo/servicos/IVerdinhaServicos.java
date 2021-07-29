@@ -1,10 +1,10 @@
-package com.example.catalogo.servico;
+package com.example.catalogo.servicos;
 
 import java.util.List;
 
 import com.example.catalogo.model.Verdinha;
 
-public interface IVerdinhaServico {
+public interface IVerdinhaServicos {
 	
 	void incluir(Verdinha verdinha);
 	

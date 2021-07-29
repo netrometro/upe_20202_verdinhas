@@ -13,14 +13,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.catalogo.dao.IVerdinhaDAO;
 import com.example.catalogo.model.Verdinha;
-import com.example.catalogo.servico.IVerdinhaServico;
+import com.example.catalogo.servicos.IVerdinhaServicos;
 
 
 @WebServlet(urlPatterns = {"/verdinha"})
 public class VerdinhaServlet extends HttpServlet{
 
 	@Autowired
-	private IVerdinhaServico iVerdinhaServico;
+	private IVerdinhaServicos iVerdinhaServicos;
 	
 	@Autowired
 	private IVerdinhaDAO dao;
@@ -34,7 +34,7 @@ public class VerdinhaServlet extends HttpServlet{
 		
 		String mensagem = "Verdinha incluida com sucesso";
 		try {
-			servico.incluir(verdinha);
+			iVerdinhaServicos.incluir(verdinha);
 		} catch (Exception e) {
 			mensagem = e.getMessage();
 		}
@@ -43,7 +43,7 @@ public class VerdinhaServlet extends HttpServlet{
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Verdinha> verdinhas = servico.listar();
+		List<Verdinha> verdinhas = iVerdinhaServicos.listar();
 		/*String resultado = "";
 		for (Verdinha verdinha : verdinhas) {
 			resultado += verdinha.toString();
@@ -61,7 +61,7 @@ public class VerdinhaServlet extends HttpServlet{
 		dao.findById(verdinha.getId());
 
 		try {
-			servico.deletar(verdinha);
+			iVerdinhaServicos.deletar(verdinha);
 		} catch (Exception e) {
 			mensagem = e.getMessage();
 		}
