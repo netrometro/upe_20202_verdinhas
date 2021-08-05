@@ -15,23 +15,23 @@ import com.example.catalogo.dao.IVerdinhaDAO;
 import com.example.catalogo.model.Verdinha;
 import com.example.catalogo.servicos.IVerdinhaServicos;
 
-
-@WebServlet(urlPatterns = {"/verdinha"})
-public class VerdinhaServlet extends HttpServlet{
+@WebServlet(urlPatterns = { "/verdinha" })
+public class VerdinhaServlet extends HttpServlet {
 
 	@Autowired
 	private IVerdinhaServicos iVerdinhaServicos;
-	
+
 	@Autowired
 	private IVerdinhaDAO dao;
+
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
 		String nome = req.getParameter("nome");
 		String especie = req.getParameter("especie");
 		String genero = req.getParameter("genero");
 
-		Verdinha verdinha = new Verdinha(nome, especie, genero, genero, null, false, null, null, null, null);
-		
+		Verdinha verdinha = new Verdinha();
+
 		String mensagem = "Verdinha incluida com sucesso";
 		try {
 			iVerdinhaServicos.incluir(verdinha);
@@ -40,24 +40,24 @@ public class VerdinhaServlet extends HttpServlet{
 		}
 		res.getOutputStream().print(mensagem);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Verdinha> verdinhas = iVerdinhaServicos.listar();
-		/*String resultado = "";
-		for (Verdinha verdinha : verdinhas) {
-			resultado += verdinha.toString();
-		}*/
+		/*
+		 * String resultado = ""; for (Verdinha verdinha : verdinhas) { resultado +=
+		 * verdinha.toString(); }
+		 */
 		resp.getOutputStream().print(verdinhas.toString());
 	}
-	
+
 	@Override
 	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		String mensagem = "Verdinha deletada com sucesso";
-		
+
 		Verdinha verdinha = preencherVerdinha(req);
-		
+
 		dao.findById(verdinha.getId());
 
 		try {
@@ -66,11 +66,11 @@ public class VerdinhaServlet extends HttpServlet{
 			mensagem = e.getMessage();
 		}
 		resp.getOutputStream().print(mensagem);
-		
+
 	}
-	
+
 	private Verdinha preencherVerdinha(HttpServletRequest req) {
-		
+
 		return null;
 	}
 }
