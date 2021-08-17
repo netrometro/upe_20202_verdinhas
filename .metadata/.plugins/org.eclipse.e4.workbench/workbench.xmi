@@ -349,7 +349,11 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_Zeq7kO6HEeuzC8yHn9xt9Q" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
+<<<<<<< HEAD
         <children xsi:type="menu:HandledToolItem" xmi:id="_Rj82MPFEEeu6E6tX4jpROw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_Xfkxqu6HEeuzC8yHn9xt9Q"/>
+=======
+        <children xsi:type="menu:HandledToolItem" xmi:id="_rF8JAPljEeu8lLC7pZ5QHQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_Xfkxqu6HEeuzC8yHn9xt9Q"/>
+>>>>>>> 603e2c8189c3ef988f83df1aadbc70c7fe7604fd
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZerioO6HEeuzC8yHn9xt9Q" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -377,7 +381,11 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZesJsO6HEeuzC8yHn9xt9Q" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
+<<<<<<< HEAD
         <children xsi:type="menu:HandledToolItem" xmi:id="_RkEyAPFEEeu6E6tX4jpROw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_XfjjmO6HEeuzC8yHn9xt9Q"/>
+=======
+        <children xsi:type="menu:HandledToolItem" xmi:id="_rGEr4PljEeu8lLC7pZ5QHQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_XfjjmO6HEeuzC8yHn9xt9Q"/>
+>>>>>>> 603e2c8189c3ef988f83df1aadbc70c7fe7604fd
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZeswwO6HEeuzC8yHn9xt9Q" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -859,6 +867,11 @@
   <bindingTables xmi:id="_aAgdUe6HEeuzC8yHn9xt9Q" bindingContext="_aAgdUO6HEeuzC8yHn9xt9Q"/>
   <bindingTables xmi:id="_aAgdU-6HEeuzC8yHn9xt9Q" bindingContext="_aAgdUu6HEeuzC8yHn9xt9Q"/>
   <bindingTables xmi:id="_aAgdVe6HEeuzC8yHn9xt9Q" bindingContext="_aAgdVO6HEeuzC8yHn9xt9Q"/>
+  <bindingTables xmi:id="_o70a0PljEeu8lLC7pZ5QHQ" elementId="org.eclipse.jst.jsp.ui.structured.text.editor.jsp.scope" bindingContext="_o7Ez8fljEeu8lLC7pZ5QHQ">
+    <bindings xmi:id="_o71B4PljEeu8lLC7pZ5QHQ" keySequence="CTRL+SHIFT+M" command="_o69fMPljEeu8lLC7pZ5QHQ"/>
+    <bindings xmi:id="_o77IgPljEeu8lLC7pZ5QHQ" keySequence="ALT+SHIFT+R" command="_o6-GQPljEeu8lLC7pZ5QHQ"/>
+    <bindings xmi:id="_o78WoPljEeu8lLC7pZ5QHQ" keySequence="ALT+SHIFT+V" command="_o69fMfljEeu8lLC7pZ5QHQ"/>
+  </bindingTables>
   <rootContext xmi:id="_Xa5tB-6HEeuzC8yHn9xt9Q" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.platform" name="In Dialogs and Windows" description="Either a dialog or a window is open">
     <children xmi:id="_Xa5tCO6HEeuzC8yHn9xt9Q" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.platform" name="In Windows" description="A window is open">
       <children xmi:id="_Xa5tCe6HEeuzC8yHn9xt9Q" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.platform" name="%bindingcontext.name.bindingView"/>
@@ -885,6 +898,11 @@
           <children xmi:id="_Xf7XE-6HEeuzC8yHn9xt9Q" elementId="org.eclipse.wst.sse.hideFormat" name="Editing in Structured Text Editors" description="Editing in Structured Text Editors"/>
           <children xmi:id="_Xf7XFO6HEeuzC8yHn9xt9Q" elementId="org.eclipse.wst.xml.selection" name="XML Source Selection" description="XML Source Selection"/>
           <children xmi:id="_Xf7XFu6HEeuzC8yHn9xt9Q" elementId="org.eclipse.wst.xml.dependencies" name="XML Source Dependencies" description="XML Source Dependencies"/>
+          <children xmi:id="_o7Ez8PljEeu8lLC7pZ5QHQ" elementId="org.eclipse.jst.jsp.core.jspsource" name="JSP Source" description="JSP Source"/>
+          <children xmi:id="_o7Ez8fljEeu8lLC7pZ5QHQ" elementId="org.eclipse.jst.jsp.ui.structured.text.editor.jsp.scope" name="Editing JSP Source" description="Editing JSP Source"/>
+          <children xmi:id="_o7Ez8vljEeu8lLC7pZ5QHQ" elementId="org.eclipse.wst.css.core.csssource" name="Editing CSS Source" description="Editing CSS Source"/>
+          <children xmi:id="_o7Ez8_ljEeu8lLC7pZ5QHQ" elementId="org.eclipse.wst.html.core.htmlsource" name="Editing HTML Source" description="Editing HTML Source"/>
+          <children xmi:id="_o7Ez9PljEeu8lLC7pZ5QHQ" elementId="org.eclipse.wst.html.occurrences" name="HTML Source Occurrences" description="HTML Source Occurrences"/>
         </children>
         <children xmi:id="_Xf7XD-6HEeuzC8yHn9xt9Q" elementId="org.dadacoalition.yedit.yeditScope" name="YEdit editor context"/>
         <children xmi:id="_Xf7XEu6HEeuzC8yHn9xt9Q" elementId="org.eclipse.ant.ui.AntEditorScope" name="Editing Ant Buildfiles" description="Editing Ant Buildfiles Context"/>
@@ -2361,6 +2379,15 @@
   <commands xmi:id="_ZEruQu6HEeuzC8yHn9xt9Q" elementId="AUTOGEN:::org.eclipse.jdt.debug.ui.DisplayViewActions/org.eclipse.jdt.debug.ui.displayViewToolbar.Display" commandName="Display" description="Display Result of Evaluating Selected Text" category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
   <commands xmi:id="_ZEwmwO6HEeuzC8yHn9xt9Q" elementId="AUTOGEN:::org.eclipse.jdt.debug.ui.DisplayViewActions/org.eclipse.jdt.debug.ui.displayViewToolbar.Inspect" commandName="Inspect" description="Inspect Result of Evaluating Selected Text" category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
   <commands xmi:id="_ZExN0O6HEeuzC8yHn9xt9Q" elementId="AUTOGEN:::org.eclipse.pde.ui.logViewActions/org.eclipse.jdt.debug.ui.LogViewActions.showStackTrace" commandName="Show Stack Trace in Console View" description="Show Stack Trace in Console View" category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_o69fMPljEeu8lLC7pZ5QHQ" elementId="org.eclipse.jst.jsp.ui.add.imports" commandName="Add Im&amp;port" description="Create import declaration for selection" category="_XfDNNO6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_o69fMfljEeu8lLC7pZ5QHQ" elementId="org.eclipse.jst.jsp.ui.refactor.move" commandName="Move" description="Move a Java Element to another package" category="_XfDNNO6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_o6-GQPljEeu8lLC7pZ5QHQ" elementId="org.eclipse.jst.jsp.ui.refactor.rename" commandName="Rename" description="Rename a Java Element" category="_XfDNNO6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_rB4IYPljEeu8lLC7pZ5QHQ" elementId="AUTOGEN:::org.eclipse.jst.jsp.core.jspsource.ruler.actions/org.eclipse.ui.texteditor.BookmarkRulerAction" commandName="Add Bookmark..." category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_rB59kPljEeu8lLC7pZ5QHQ" elementId="AUTOGEN:::org.eclipse.jst.jsp.core.jspsource.ruler.actions/org.eclipse.ui.texteditor.SelectRulerAction" commandName="Select Ruler" category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_rB59kfljEeu8lLC7pZ5QHQ" elementId="AUTOGEN:::org.eclipse.wst.css.core.csssource.ruler.actions/org.eclipse.ui.texteditor.BookmarkRulerAction" commandName="Add Bookmark..." category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_rB6koPljEeu8lLC7pZ5QHQ" elementId="AUTOGEN:::org.eclipse.wst.css.core.csssource.ruler.actions/org.eclipse.ui.texteditor.SelectRulerAction" commandName="Select Ruler" category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_rB6kofljEeu8lLC7pZ5QHQ" elementId="AUTOGEN:::org.eclipse.wst.html.core.htmlsource.ruler.actions/org.eclipse.ui.texteditor.BookmarkRulerAction" commandName="Add Bookmark..." category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
+  <commands xmi:id="_rB7LsPljEeu8lLC7pZ5QHQ" elementId="AUTOGEN:::org.eclipse.wst.html.core.htmlsource.ruler.actions/org.eclipse.ui.texteditor.SelectRulerAction" commandName="Select Ruler" category="_XfDNVe6HEeuzC8yHn9xt9Q"/>
   <addons xmi:id="_Xa5tC-6HEeuzC8yHn9xt9Q" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_Xa5tDO6HEeuzC8yHn9xt9Q" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_Xa5tDe6HEeuzC8yHn9xt9Q" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -2372,7 +2399,11 @@
   <addons xmi:id="_Xa5tE-6HEeuzC8yHn9xt9Q" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_Xa5tFO6HEeuzC8yHn9xt9Q" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_XcBHUO6HEeuzC8yHn9xt9Q" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
+<<<<<<< HEAD
   <addons xmi:id="_REtVcfFEEeu6E6tX4jpROw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+=======
+  <addons xmi:id="_qdZiUPljEeu8lLC7pZ5QHQ" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+>>>>>>> 603e2c8189c3ef988f83df1aadbc70c7fe7604fd
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_XfDNMO6HEeuzC8yHn9xt9Q" elementId="org.eclipse.team.ui.category.team" name="Version control (Team)" description="Actions that apply when working with a version control system"/>
   <categories xmi:id="_XfDNMe6HEeuzC8yHn9xt9Q" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
