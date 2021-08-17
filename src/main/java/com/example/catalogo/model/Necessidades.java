@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.example.base.EntidadeBase;
+import com.example.base.GenericEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,7 +19,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Necessidades extends EntidadeBase {
+public class Necessidades extends GenericEntity {
 
 	@OneToOne(mappedBy = "necessidades")
 	private Verdinha verdinha;

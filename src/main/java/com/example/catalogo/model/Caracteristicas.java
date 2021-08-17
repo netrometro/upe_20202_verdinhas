@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import com.example.base.EntidadeBase;
+import com.example.base.GenericEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,7 +22,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Caracteristicas extends EntidadeBase {
+public class Caracteristicas extends GenericEntity {
 
 	@Column(length = 60, nullable = false)
 	@NotBlank(message = "Informe a folhagem")

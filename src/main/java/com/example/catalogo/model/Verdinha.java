@@ -4,30 +4,26 @@ import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import com.example.base.EntidadeBase;
+import com.example.base.GenericEntity;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
-@Entity
-@Table(name = "verdinhas")
-@Setter
-@Getter
+@Data
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Verdinha extends EntidadeBase {
+public class Verdinha extends GenericEntity<Verdinha> {
+
+	private static final long serialVersionUID = 1L;
 
 	@Column(length = 60, nullable = false)
 	@NotBlank(message = "Informe o nome da planta")
