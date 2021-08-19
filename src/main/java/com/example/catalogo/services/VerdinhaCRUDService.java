@@ -4,10 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.catalogo.dao.IVerdinhaDAO;
-import com.example.catalogo.services.interfaces.IVerdinhaCRUDService;
+import com.example.catalogo.services.interfaces.IVerdinhaCrudService;
 
 @Service
-public class VerdinhaCRUDService implements IVerdinhaCRUDService{
+public class VerdinhaCRUDService implements IVerdinhaCrudService{
 
 	@Autowired
 	private IVerdinhaDAO dao;
