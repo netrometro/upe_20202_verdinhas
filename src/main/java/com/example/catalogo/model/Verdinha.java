@@ -32,7 +32,7 @@ public class Verdinha extends GenericEntity{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column
+	@Column(name = "id_verdinha")
 	private Long id;
 
 	@Column(length = 60, nullable = false)

@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,7 +34,7 @@ public class Local extends GenericEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column
+	@Column(name = "id_local")
 	private Long id;
 
 	@Column(length = 60, nullable = false)
@@ -60,10 +62,13 @@ public class Local extends GenericEntity {
 	@OneToMany(mappedBy = "local")
 	private List<Verdinha> verdinhas;
 
+	@Enumerated(EnumType.STRING)
 	private TipoIncidenciaSolar incidenciaSolar;
 	
+	@Enumerated(EnumType.STRING)
 	private TipoExposicaoSolar exposicaoSolar;
 	
+	@Enumerated(EnumType.STRING)
 	private TipoVento vento;
 	
 }

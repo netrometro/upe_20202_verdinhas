@@ -2,6 +2,8 @@ package com.example.catalogo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,7 +30,7 @@ public class Caracteristicas extends GenericEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column
+	@Column(name = "id_caracteristica")
 	private Long id;
 
 	@Column(length = 60, nullable = false)
@@ -76,6 +78,7 @@ public class Caracteristicas extends GenericEntity {
 	@OneToOne(mappedBy = "caracteristicas")
 	private Verdinha verdinha;
 	
+	@Enumerated(EnumType.STRING)
 	private TipoPropagacao propagacao;
 	
 }
