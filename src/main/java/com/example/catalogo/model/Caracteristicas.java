@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.example.base.GenericEntity;
+import com.example.catalogo.model.enuns.TipoPropagacao;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -74,5 +75,7 @@ public class Caracteristicas extends GenericEntity {
 	
 	@OneToOne(mappedBy = "caracteristicas")
 	private Verdinha verdinha;
+	
+	private TipoPropagacao propagacao;
 	
 }

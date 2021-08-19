@@ -14,6 +14,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.example.base.GenericEntity;
+import com.example.catalogo.model.enuns.TipoExposicaoSolar;
+import com.example.catalogo.model.enuns.TipoIncidenciaSolar;
+import com.example.catalogo.model.enuns.TipoVento;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -57,4 +60,10 @@ public class Local extends GenericEntity {
 	@OneToMany(mappedBy = "local")
 	private List<Verdinha> verdinhas;
 
+	private TipoIncidenciaSolar incidenciaSolar;
+	
+	private TipoExposicaoSolar exposicaoSolar;
+	
+	private TipoVento vento;
+	
 }

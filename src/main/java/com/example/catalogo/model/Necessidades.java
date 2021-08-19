@@ -9,6 +9,15 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.example.base.GenericEntity;
+import com.example.catalogo.model.enuns.TipoExposicaoSolar;
+import com.example.catalogo.model.enuns.TipoFrequencia;
+import com.example.catalogo.model.enuns.TipoIncidenciaSolar;
+import com.example.catalogo.model.enuns.TipoPodaLimpeza;
+import com.example.catalogo.model.enuns.TipoPropagacao;
+import com.example.catalogo.model.enuns.TipoRega;
+import com.example.catalogo.model.enuns.TipoSubstrato;
+import com.example.catalogo.model.enuns.TipoVaso;
+import com.example.catalogo.model.enuns.TipoVento;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -29,5 +38,23 @@ public class Necessidades extends GenericEntity {
 	
 	@OneToOne(mappedBy = "necessidades")
 	private Verdinha verdinha;
+	
+	private TipoIncidenciaSolar incidenciaSolar;
+	
+	private TipoExposicaoSolar exposicaoSolar;
+	
+	private TipoRega rega;
+	
+	private TipoFrequencia tipoFrequencia;
+	
+	private TipoVento vento ;
+	
+	private TipoSubstrato substrato;
+	
+	private TipoVaso vaso;
+	
+	private TipoPodaLimpeza podaLimpeza;
+	
+	private TipoPropagacao propagacao;
 	
 }
