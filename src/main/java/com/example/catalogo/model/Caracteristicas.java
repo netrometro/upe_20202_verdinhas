@@ -23,7 +23,7 @@ import lombok.experimental.Accessors;
 @Data
 @Entity
 @Accessors(chain = true)
-@Table(name = "verdinhas_caracteristicas")
+@Table(name = "caracteristicas")
 @EqualsAndHashCode(callSuper = false)
 public class Caracteristicas extends GenericEntity {
 	private static final long serialVersionUID = 1L;

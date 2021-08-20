@@ -27,7 +27,7 @@ import lombok.experimental.Accessors;
 @Data
 @Entity
 @Accessors(chain = true)
-@Table(name = "verdinhas_local")
+@Table(name = "local")
 @EqualsAndHashCode(callSuper = false)
 public class Local extends GenericEntity {
 	private static final long serialVersionUID = 1L;

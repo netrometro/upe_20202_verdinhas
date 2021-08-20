@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 @Data
 @Entity
 @Accessors(chain = true)
-@Table(name = "verdinhas_vaso")
+@Table(name = "vaso")
 @EqualsAndHashCode(callSuper = false)
 public class Vaso {
 
