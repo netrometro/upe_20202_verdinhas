@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -24,9 +25,15 @@ public class Vaso {
 	private Long id;
 	
 	private String nome;
+	
 	private String composicao;
+	
 	private byte[] fotos;
+	
 	private Integer quantidade;
+	
 	private String observacao;
 	
+	@Transient
+	private String tipo;
 }

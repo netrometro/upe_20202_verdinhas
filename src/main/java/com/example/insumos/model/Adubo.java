@@ -1,9 +1,12 @@
 package com.example.insumos.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,6 +16,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.example.insumos.model.enuns.TipoAdubo;
 import com.example.manutencao.model.Manutencao;
 
 import lombok.Data;
@@ -53,8 +57,11 @@ public class Adubo {
 	@Size(max = 60, min = 5, message = "A observação deve ter no máximo {max} 60 caracteres e no mínimo {min} 5 caracteres")
 	private String observacao;
 	
-	@OneToMany(mappedBy = "adubacao")
-	private List<Manutencao> manutencoes;
+	@OneToMany(mappedBy = "adubo")
+	private List<Manutencao> manutencoes = new ArrayList<>();
+	
+	@Enumerated(EnumType.STRING)
+	private TipoAdubo tipoAdubo;
 	
 }
 

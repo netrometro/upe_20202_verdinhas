@@ -1,9 +1,14 @@
 package com.example.manutencao.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.OneToOne;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.example.base.GenericEntity;
@@ -22,11 +27,17 @@ import lombok.experimental.Accessors;
 public class Brotacao extends GenericEntity {
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id_brotacao")
+	private Long id;
+	
 	private String observacao;
 
 	private Byte[] fotos;
-
-	@OneToOne(mappedBy = "brotacao")
+	
+	@ManyToOne
+	@JoinColumn(name = "id_ocorrencia")
 	private Ocorrencia ocorrencia;
 	
 	@Enumerated(EnumType.STRING)

@@ -1,9 +1,16 @@
 package com.example.manutencao.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.OneToOne;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.example.base.GenericEntity;
@@ -18,16 +25,21 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Table(name = "enraizamento")
 @EqualsAndHashCode(callSuper = false)
-public class Enraizanamento  extends GenericEntity {
+public class Enraizamento  extends GenericEntity {
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id_enraizamento")
+	private Long id;
+	
 	private String observacao;
 
 	private Byte[] fotos;
-
-	@OneToOne(mappedBy = "enraizamento")
-	private Ocorrencia ocorrencia;
 	
+	@OneToMany(mappedBy = "enraizamento")
+	private List<Ocorrencia> ocorrencias = new ArrayList<>();
+
 	@Enumerated(EnumType.STRING)
 	private TipoIntensidade intensidade;
 	
