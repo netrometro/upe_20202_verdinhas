@@ -13,6 +13,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.example.base.GenericEntity;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -22,7 +24,8 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Table(name = "ocorrencia")
 @EqualsAndHashCode(callSuper = false)
-public class Ocorrencia {
+public class Ocorrencia  extends GenericEntity {
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

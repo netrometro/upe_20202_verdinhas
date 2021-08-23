@@ -14,6 +14,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.example.base.GenericEntity;
 import com.example.insumos.model.Adubo;
 import com.example.insumos.model.Substrato;
 import com.example.insumos.model.Tratamento;
@@ -29,7 +30,8 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Table(name = "manutencao")
 @EqualsAndHashCode(callSuper = false)
-public class Manutencao {
+public class Manutencao  extends GenericEntity {
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
