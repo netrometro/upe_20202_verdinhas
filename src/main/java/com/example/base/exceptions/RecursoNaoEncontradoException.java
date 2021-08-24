@@ -1,4 +1,4 @@
-package com.example.base.excpetions;
+package com.example.base.exceptions;
 
 public class RecursoNaoEncontradoException extends RuntimeException {
 	private static final long serialVersionUID = 491532513940663615L;

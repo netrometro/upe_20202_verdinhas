@@ -3,8 +3,6 @@ package com.example.base;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-import javax.persistence.criteria.Fetch;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CrudService<T extends GenericEntity, ID> {

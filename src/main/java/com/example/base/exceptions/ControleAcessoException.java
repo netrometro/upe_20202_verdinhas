@@ -1,4 +1,4 @@
-package com.example.base.excpetions;
+package com.example.base.exceptions;
 
 public class ControleAcessoException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
