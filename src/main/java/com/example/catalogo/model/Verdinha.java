@@ -1,6 +1,8 @@
 package com.example.catalogo.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -10,11 +12,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import com.example.base.GenericEntity;
 
@@ -32,43 +32,25 @@ public class Verdinha extends GenericEntity{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id_verdinha")
+	@Column
 	private Long id;
 
-	@Column(length = 60, nullable = false)
-	@NotBlank(message = "Informe o nome da planta")
-	@NotNull
-	@Size(max = 60, min = 2, message = "O nome deve ter no máximo {max} 60 caracteres e no mínimo {min} 2 caracteres")
 	private String nome;
 
-	@Column(length = 40, nullable = false)
-	@NotBlank(message = "Informe o nome da especie")
-	@NotNull
-	@Size(max = 40, min = 2, message = "O nome deve ter no máximo {max} 40 caracteres e no mínimo {min} 2 caracteres")
 	private String especie;
 
-	@Column(length = 30, nullable = false)
-	@NotBlank(message = "Informe o gênero")
-	@NotNull
-	@Size(max = 30, min = 2, message = "O nome deve ter no máximo {max} 30 caracteres e no mínimo {min} 2 caracteres")
 	private String genero;
 
-	@Column(length = 40, nullable = false)
-	@NotBlank(message = "Informe o nome popular")
-	@NotNull
-	@Size(max = 40, min = 2, message = "O nome deve ter no máximo {max} 40 caracteres e no mínimo {min} 2 caracteres")
 	private String nomePopular;
 
-	@Column(nullable = false)
 	private LocalDate dataAquisicao = LocalDate.now();
 
 	private boolean visivel;
 
 	private byte[] fotos;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_necessidades")
-	private Necessidades necessidades;
+	@OneToMany(mappedBy = "verdinha")
+	private List<Necessidades> necessidades = new ArrayList<>();
 
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_local")

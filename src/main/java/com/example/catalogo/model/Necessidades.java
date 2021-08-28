@@ -1,13 +1,13 @@
 package com.example.catalogo.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.example.base.GenericEntity;
@@ -35,37 +35,37 @@ public class Necessidades extends GenericEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id_necessidade")
 	private Long id;
-	
-	@OneToOne(mappedBy = "necessidades")
+
+	@ManyToOne
+	@JoinColumn(name = "id_verdinha")
 	private Verdinha verdinha;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoIncidenciaSolar incidenciaSolar;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoExposicaoSolar exposicaoSolar;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoRega rega;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoFrequencia tipoFrequencia;
-	
+
 	@Enumerated(EnumType.STRING)
-	private TipoVento vento ;
-	
+	private TipoVento vento;
+
 	@Enumerated(EnumType.STRING)
 	private TipoSubstrato substrato;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoVaso vaso;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoPodaLimpeza podaLimpeza;
-	
+
 	@Enumerated(EnumType.STRING)
 	private TipoPropagacao propagacao;
-	
+
 }

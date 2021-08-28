@@ -36,9 +36,11 @@ import java.util.Map;
 */
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.SpringApplication;
 
 @SpringBootApplication
+@ServletComponentScan("com.example")
 public class Main {
 
 /*
