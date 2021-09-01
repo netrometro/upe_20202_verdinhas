@@ -55,11 +55,10 @@ public class NecessidadesController {
 	    return responseService.create(crudService.update(necessidades), HttpStatus.OK);
 	  }
 	  
-	  @DeleteMapping("/{Id}")
-	  public ResponseEntity<?> delete(
-	    @PathVariable Long id)
-	  {
-	    return responseService.create(crudService.delete(id), HttpStatus.OK);
+	  @DeleteMapping("/{id}")
+	  public ResponseEntity<?> delete(@PathVariable Long id) {
+		crudService.delete(id);
+	    return ResponseEntity.noContent().build();
 	  }
 	
 }

@@ -14,16 +14,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.base.interfaces.IVerdinhaCRUDService;
-import com.example.catalogo.model.Verdinha;
+import com.example.base.interfaces.ICaracteristicasCRUDService;
+import com.example.catalogo.model.Caracteristicas;
 import com.example.catalogo.services.serializers.ResponseService;
 
 @RestController
-@RequestMapping(value = "/api/verdinhas")
-public class VerdinhaController {
+@RequestMapping(value = "/api/caracteristicas")
+public class CaracteristicasController {
 
 	@Autowired
-	private IVerdinhaCRUDService crudService;
+	private ICaracteristicasCRUDService crudService;
 	
 	@Autowired
 	private ResponseService responseService;
@@ -42,17 +42,17 @@ public class VerdinhaController {
 
 	  @PostMapping
 	  public ResponseEntity<?> create(
-	    @RequestBody @Valid Verdinha verdinha)
+	    @RequestBody @Valid Caracteristicas caracteristicas)
 	  {
-	    return responseService.create(crudService.insert(verdinha), HttpStatus.OK);
+	    return responseService.create(crudService.insert(caracteristicas), HttpStatus.OK);
 	  }
 
 	  @PutMapping("/{id}")
 	  public ResponseEntity<?> update(
 	    @PathVariable Long id,
-	    @RequestBody @Valid Verdinha verdinha)
+	    @RequestBody @Valid Caracteristicas caracteristicas)
 	  {
-	    return responseService.create(crudService.update(verdinha), HttpStatus.OK);
+	    return responseService.create(crudService.update(caracteristicas), HttpStatus.OK);
 	  }
 	  
 	  @DeleteMapping("/{id}")

@@ -1,5 +1,6 @@
 package com.example.catalogo.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -34,7 +35,7 @@ public class Necessidades extends GenericEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@ManyToOne
@@ -54,12 +55,15 @@ public class Necessidades extends GenericEntity {
 	private TipoFrequencia tipoFrequencia;
 
 	@Enumerated(EnumType.STRING)
+	@Column(name = "tipo_vento")
 	private TipoVento vento;
 
 	@Enumerated(EnumType.STRING)
+	@Column(name = "tipo_substrato")
 	private TipoSubstrato substrato;
 
 	@Enumerated(EnumType.STRING)
+	@Column(name = "tipo_vaso")
 	private TipoVaso vaso;
 
 	@Enumerated(EnumType.STRING)

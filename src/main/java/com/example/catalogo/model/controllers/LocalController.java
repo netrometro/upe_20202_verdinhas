@@ -14,16 +14,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.base.interfaces.IVerdinhaCRUDService;
-import com.example.catalogo.model.Verdinha;
+import com.example.base.interfaces.ILocalCRUDService;
+import com.example.catalogo.model.Local;
 import com.example.catalogo.services.serializers.ResponseService;
 
+@RequestMapping("/api/locais")
 @RestController
-@RequestMapping(value = "/api/verdinhas")
-public class VerdinhaController {
+public class LocalController {
 
 	@Autowired
-	private IVerdinhaCRUDService crudService;
+	private ILocalCRUDService crudService;
 	
 	@Autowired
 	private ResponseService responseService;
@@ -33,7 +33,7 @@ public class VerdinhaController {
 	    return responseService.create(crudService.fetchAll(), HttpStatus.OK);
 	  }
 
-	  @GetMapping("/{id}")
+	  @GetMapping("/{Id}")
 	  public ResponseEntity<?> fetch(
 	    @PathVariable Long id)
 	  {
@@ -42,17 +42,17 @@ public class VerdinhaController {
 
 	  @PostMapping
 	  public ResponseEntity<?> create(
-	    @RequestBody @Valid Verdinha verdinha)
+	    @RequestBody @Valid Local local)
 	  {
-	    return responseService.create(crudService.insert(verdinha), HttpStatus.OK);
+	    return responseService.create(crudService.insert(local), HttpStatus.OK);
 	  }
 
-	  @PutMapping("/{id}")
+	  @PutMapping("/{Id}")
 	  public ResponseEntity<?> update(
 	    @PathVariable Long id,
-	    @RequestBody @Valid Verdinha verdinha)
+	    @RequestBody @Valid Local local )
 	  {
-	    return responseService.create(crudService.update(verdinha), HttpStatus.OK);
+	    return responseService.create(crudService.update(local), HttpStatus.OK);
 	  }
 	  
 	  @DeleteMapping("/{id}")

@@ -14,5 +14,5 @@ public enum TipoFrequencia {
 	DoisX_SEMANA,
 	TresX_SEMANA,
 	QuatroX_SEMANA;
-		
+	
 }
