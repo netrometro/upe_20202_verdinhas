@@ -52,8 +52,8 @@ public class Verdinha extends GenericEntity{
 	@OneToMany(mappedBy = "verdinha")
 	private List<Necessidades> necessidades = new ArrayList<>();
 
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_local")
+	@ManyToOne
+	@JoinColumn(name = "local_id")
 	private Local local;
 
 	@OneToOne(cascade = CascadeType.ALL)

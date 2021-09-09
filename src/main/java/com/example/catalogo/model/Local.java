@@ -1,5 +1,6 @@
 package com.example.catalogo.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -60,7 +61,7 @@ public class Local extends GenericEntity {
 	private byte[] fotos;
 	
 	@OneToMany(mappedBy = "local")
-	private List<Verdinha> verdinhas;
+	private List<Verdinha> verdinhas = new ArrayList<>();
 
 	@Enumerated(EnumType.STRING)
 	private TipoIncidenciaSolar incidenciaSolar;
