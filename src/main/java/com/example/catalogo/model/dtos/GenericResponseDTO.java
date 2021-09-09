@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class GenericResponseDTO<Any> {
-
+	
 	private LocalDateTime timestamp = LocalDateTime.now();
 	private int status;
 	private String statusText;

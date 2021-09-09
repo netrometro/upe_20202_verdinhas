@@ -35,8 +35,8 @@ public class NecessidadesCRUDService implements INecessidadesCRUDService {
 	}
 	
 	public Necessidades create(Necessidades necessidades) {
-		log.info("Necessidade cadastrada na base de dados");
-		return Necessidade.save(necessidades);
+		Necessidades newNecessidade = new Necessidades();
+		return Necessidade.save(newNecessidade);
 	}
 	
 	public Necessidades update(Long necessidadeID, Necessidades necessidades) {

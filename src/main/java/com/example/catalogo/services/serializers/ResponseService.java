@@ -29,5 +29,5 @@ public class ResponseService {
 				.setResponse(body);
 		return new ResponseEntity<GenericResponseDTO<Any>>(response, status);
 	}
-
+	
 }
