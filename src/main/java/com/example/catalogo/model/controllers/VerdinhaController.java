@@ -18,8 +18,6 @@ import com.example.base.interfaces.IVerdinhaCRUDService;
 import com.example.catalogo.model.Verdinha;
 import com.example.catalogo.services.serializers.ResponseService;
 
-import jdk.internal.org.jline.utils.Log;
-
 @RestController
 @RequestMapping(value = "/api/verdinhas")
 public class VerdinhaController {
